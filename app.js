@@ -1,8 +1,12 @@
 const express = require("express");
-
 const app = express();
+
 app.set('view engine', 'ejs');
 
+//this is the middleware
+app.use('/assets', express.static('assets'));
+
+//anything between the function start and the res is middleware
 app.get('/', (req, res) => {
     res.render('index');
 });

@@ -3,12 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <style>
-        body{
-            background-color: cadetblue;
-            color: white;
-        }
-    </style>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <%- include('partials/nav') -%>
@@ -18,7 +13,7 @@
     <p>Job: <%= data.job %></p>
     <h2>Hobbies</h2>
     <ul>
-        <% data.hobbies.forEach(function(hobby){%>
+        <% data.hobbies.forEach((hobby) => {%>
             <li><%= hobby %></li>
         <%});%>
     </ul>
