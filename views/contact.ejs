@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Contact</title>
     <style>
         body{
             background-color: cadetblue;
@@ -12,15 +12,7 @@
 </head>
 <body>
     <%- include('partials/nav') -%>
-    <h1><%= person %>'s page</h1>
-    <p>Welcome!</p>
-    <p>Age: <%= data.age %></p>
-    <p>Job: <%= data.job %></p>
-    <h2>Hobbies</h2>
-    <ul>
-        <% data.hobbies.forEach(function(hobby){%>
-            <li><%= hobby %></li>
-        <%});%>
-    </ul>
+    <h1>Contact</h1>
+    <p>Welcome to our contact page!</p>
 </body>
 </html>
