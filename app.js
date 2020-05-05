@@ -1,5 +1,8 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.set('view engine', 'ejs');
 
@@ -14,6 +17,12 @@ app.get('/', (req, res) => {
 app.get('/contact', (req, res) => {
     // console.log(req.query);
     res.render('contact', {qs: req.query});
+});
+
+app.post('/contact', urlencodedParser, (req, res) => {
+    console.log(req.body);
+    //nodemailer will let you send the post request on to a database
+    res.render('contact-success', {data: req.body});
 });
 
 app.get('/profile/:name', (req, res) => {
